@@ -1,0 +1,24 @@
+﻿@model IEnumerable<community_assis_2017.Models.GrantType>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Community assist 2017</h1>
+
+</div>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.GrantTypeKey)</th>
+        <th>@Html.DisplayNameFor(model => model.GrantTypeName)</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.GrantTypeKey)</td>
+            <td>@Html.DisplayFor(model => item.GrantTypeName)</td>
+        </tr>
+    }
+</table>

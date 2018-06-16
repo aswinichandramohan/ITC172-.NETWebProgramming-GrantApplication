@@ -28,29 +28,22 @@ namespace community_assis_2017.Controllers
             person.FirstName, person.Email, person.PlainPassword, 
             person.Apartment, person.Street, 
             person.City, person.State, person.Zipcode, person.Phone);
-           
 
             if (result != -1)
             {
                 m.MessageText = "Welcome, " + person.FirstName;
             }
-
             else
             {
                 m.MessageText = "Something Went Error";
-
             }
 
             return View("Result", m);
         }
 
-public ActionResult Result(Message m)
+        public ActionResult Result(Message m)
         {
             return View(m);
         }
-
-
-
-
     }
 }
